@@ -134,4 +134,45 @@
 
     activateTab(tabs.find((tab) => tab.classList.contains("is-active")) || tabs[0]);
   });
+
+  /* ── Scroll-triggered fade-in reveal ── */
+  const revealTargets = document.querySelectorAll(".panel, .app-section");
+  revealTargets.forEach((el) => el.classList.add("fade-in"));
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  revealTargets.forEach((el) => revealObserver.observe(el));
+
+  /* ── Live countdown timer ── */
+  const countdownCells = document.querySelectorAll(".countdown-cell strong");
+  if (countdownCells.length === 4) {
+    let totalSeconds =
+      parseInt(countdownCells[0].textContent, 10) * 86400 +
+      parseInt(countdownCells[1].textContent, 10) * 3600 +
+      parseInt(countdownCells[2].textContent, 10) * 60 +
+      parseInt(countdownCells[3].textContent, 10);
+
+    setInterval(() => {
+      if (totalSeconds <= 0) return;
+      totalSeconds--;
+      const d = Math.floor(totalSeconds / 86400);
+      const h = Math.floor((totalSeconds % 86400) / 3600);
+      const m = Math.floor((totalSeconds % 3600) / 60);
+      const s = totalSeconds % 60;
+      countdownCells[0].textContent = String(d).padStart(2, "0");
+      countdownCells[1].textContent = String(h).padStart(2, "0");
+      countdownCells[2].textContent = String(m).padStart(2, "0");
+      countdownCells[3].textContent = String(s).padStart(2, "0");
+    }, 1000);
+  }
 }());
