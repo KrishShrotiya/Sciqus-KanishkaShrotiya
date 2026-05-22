@@ -376,6 +376,7 @@ img {
   opacity: 1;
   transform: translateX(0);
   pointer-events: auto;
+  position: relative;
 }
 
 .carousel-slide img {
@@ -504,6 +505,7 @@ img {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
+  position: relative;
 }
 
 .slider-slide img {
@@ -616,6 +618,7 @@ img {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  position: relative;
 }
 
 .tab-panel h2 {
