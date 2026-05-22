@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Grand Prix Hub</title>
+  <meta name="description" content="Apex Grand Prix Hub — Formula 1 race weekends, pit strategy, driver focus, circuit guides, and telemetry data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <button class="icon-button menu-button" type="button" aria-label="Toggle paddock menu" aria-expanded="false" aria-controls="siteSidebar" title="Menu" data-menu-toggle>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a class="brand" href="index.html" aria-label="Apex Grand Prix home">
+      <span class="brand-mark" aria-hidden="true">A1</span>
+      <span>Apex Grand Prix</span>
+    </a>
+
+    <nav class="header-actions" aria-label="Page links">
+      <a href="mobile.html">Race App</a>
+    </nav>
+  </header>
+
+  <div class="page-shell">
+    <aside class="sidebar" id="siteSidebar" aria-label="Paddock navigation" data-sidebar>
+      <button class="icon-button sidebar-close" type="button" aria-label="Close sidebar" title="Close" data-menu-close>&times;</button>
+
+      <div class="sidebar-word" aria-hidden="true">
+        <span>P</span>
+        <span>A</span>
+        <span>D</span>
+        <span>D</span>
+        <span>O</span>
+        <span>C</span>
+        <span>K</span>
+      </div>
+
+      <nav class="sidebar-menu" aria-label="Race sections">
+        <a href="#race-weekend">Race Weekend</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#driver-focus">Driver Focus</a>
+        <a href="#circuit">Circuit</a>
+        <a href="#team-radio">Team Radio</a>
+        <a href="#speed-trap">Speed Trap</a>
+      </nav>
+    </aside>
+
+    <button class="page-backdrop" type="button" aria-label="Dismiss sidebar" data-menu-backdrop></button>
+
+    <main class="desktop-grid" aria-label="Formula 1 race dashboard">
+      <section class="panel hero-panel" id="race-weekend" data-carousel>
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">Lights Out</span>
+            <h1>Formula 1 Race Weekend</h1>
+          </div>
+          <span class="panel-tag">Live Story</span>
+        </div>
+
+        <div class="carousel-stage race-carousel">
+          <article class="carousel-slide is-active">
+            <img src="assets/f1-car-night.png" alt="Formula 1 car racing at night with sparks">
+            <div class="slide-caption">
+              <strong>Night race drama</strong>
+              <span>Sparks, floodlights, and the most demanding circuit on the calendar.</span>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="assets/f1-driver-cockpit.png" alt="Formula 1 driver in the cockpit with hands on steering wheel">
+            <div class="slide-caption">
+              <strong>Cockpit focus</strong>
+              <span>Behind the visor, every micro-adjustment decides the lap time.</span>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="assets/f1-pitstop.png" alt="Formula 1 pit stop crew changing tyres">
+            <div class="slide-caption">
+              <strong>Pit stop precision</strong>
+              <span>Sub-three-second service — the fastest hands in motorsport.</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="carousel-dots" aria-label="Race story slides">
+          <button class="is-active" type="button" aria-label="Show start grid slide" data-carousel-dot></button>
+          <button type="button" aria-label="Show speed trap slide" data-carousel-dot></button>
+          <button type="button" aria-label="Show podium slide" data-carousel-dot></button>
+        </div>
+      </section>
+
+      <section class="panel strategy-panel" id="strategy">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">Pit Wall</span>
+            <h2>Strategy Briefing</h2>
+          </div>
+        </div>
+
+        <img class="panel-image" src="assets/f1-pitstop.png" alt="Formula 1 pit stop with mechanics servicing the car">
+
+        <div class="metric-row">
+          <span><strong>Soft</strong> tyre window</span>
+          <span><strong>1.8s</strong> undercut gap</span>
+          <span><strong>42</strong> racing laps</span>
+        </div>
+      </section>
+
+      <section class="panel driver-panel" id="driver-focus" data-slider>
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">Driver Focus</span>
+            <h2>Onboard Moments</h2>
+          </div>
+        </div>
+
+        <div class="slider-shell">
+          <button class="icon-button slider-arrow" type="button" aria-label="Previous slide" title="Previous" data-slider-prev>&lsaquo;</button>
+          <div class="slider-window">
+            <article class="slider-slide is-active">
+              <img src="assets/f1-driver-cockpit.png" alt="Formula 1 driver ready in cockpit">
+              <h3>Attack Mode</h3>
+              <p>ERS deployed, DRS open, and the overtake is set before the braking marker.</p>
+            </article>
+            <article class="slider-slide">
+              <img src="assets/f1-helmet.png" alt="Formula 1 racing helmet with track reflection">
+              <h3>Helmet Design</h3>
+              <p>Carbon fiber precision — 1.25 kg of protection at 330 km/h through the apex.</p>
+            </article>
+            <article class="slider-slide">
+              <img src="assets/f1-steering-wheel.png" alt="Formula 1 steering wheel with buttons and display">
+              <h3>Steering Wheel</h3>
+              <p>25+ buttons, rotary dials, and an LED display — the driver's command center.</p>
+            </article>
+          </div>
+          <button class="icon-button slider-arrow" type="button" aria-label="Next slide" title="Next" data-slider-next>&rsaquo;</button>
+        </div>
+      </section>
+
+      <section class="panel circuit-panel" id="circuit">
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">Track Map</span>
+            <h2>Circuit Guide</h2>
+          </div>
+        </div>
+
+        <div class="circuit-layout">
+          <img src="assets/f1-car-night.png" alt="Formula 1 car racing at night on street circuit">
+          <div class="circuit-notes">
+            <article>
+              <strong>Sector 1</strong>
+              <span>Fast entry, heavy braking, easy to lock the front-left.</span>
+            </article>
+            <article>
+              <strong>Sector 2</strong>
+              <span>Medium-speed balance decides lap time through the esses.</span>
+            </article>
+            <article>
+              <strong>Sector 3</strong>
+              <span>Traction and battery deployment into the main straight.</span>
+            </article>
+            <article>
+              <strong>DRS Zone</strong>
+              <span>Best passing chance after a strong exit onto the straight.</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel radio-panel" id="team-radio" data-tab-group>
+        <div class="tabs" role="tablist" aria-label="Team radio tabs">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="web-panel-a" id="web-tab-a" data-tab>Garage</button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="web-panel-b" id="web-tab-b" data-tab>Radio</button>
+        </div>
+
+        <div class="tab-content">
+          <article class="tab-panel is-active" id="web-panel-a" role="tabpanel" aria-labelledby="web-tab-a" data-tab-panel>
+            <span class="eyebrow">Team Call</span>
+            <h2>Box this lap</h2>
+            <p>Mechanics ready, tyres staged, and the pit lane delta is inside the target window.</p>
+          </article>
+          <article class="tab-panel" id="web-panel-b" role="tabpanel" aria-labelledby="web-tab-b" data-tab-panel>
+            <span class="eyebrow">Driver Radio</span>
+            <h2>Push now</h2>
+            <p>Battery available, traffic clear, and the rival ahead is losing rear grip.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel speed-panel" id="speed-trap" data-slider>
+        <div class="panel-heading">
+          <div>
+            <span class="eyebrow">Telemetry</span>
+            <h2>Speed Trap</h2>
+          </div>
+          <span class="panel-tag">Interactive</span>
+        </div>
+
+        <div class="wide-slider">
+          <button class="icon-button slider-arrow" type="button" aria-label="Previous item" title="Previous" data-slider-prev>&lsaquo;</button>
+          <div class="wide-slider-window">
+            <article class="slider-slide is-active">
+              <img src="assets/f1-car-night.png" alt="Formula 1 car at top speed">
+              <h3>338 km/h</h3>
+              <p>Low wing, clean air, and full deployment before the braking zone.</p>
+            </article>
+            <article class="slider-slide">
+              <img src="assets/f1-pitstop.png" alt="Formula 1 pit stop in progress">
+              <h3>2.4s stop</h3>
+              <p>Sub-three-second service keeps the car ahead after the stop cycle.</p>
+            </article>
+            <article class="slider-slide">
+              <img src="assets/f1-driver-cockpit.png" alt="Formula 1 driver cockpit launch">
+              <h3>0.21s launch</h3>
+              <p>Reaction time and wheelspin control decide the run to turn one.</p>
+            </article>
+          </div>
+          <button class="icon-button slider-arrow" type="button" aria-label="Next item" title="Next" data-slider-next>&rsaquo;</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

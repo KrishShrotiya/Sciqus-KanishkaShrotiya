@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Grand Prix Race App</title>
+  <meta name="description" content="Formula 1 mobile race app experience with live race data, driver profiles, pit strategy, and circuit telemetry.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="mock-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Apex Grand Prix home">
+      <span class="brand-mark" aria-hidden="true">A1</span>
+      <span>Apex Grand Prix</span>
+    </a>
+
+    <nav class="header-actions" aria-label="Page links">
+      <a href="index.html">Website</a>
+    </nav>
+  </header>
+
+  <main class="mock-board" aria-label="Formula 1 mobile app mockup">
+    <!-- Single scrollable phone -->
+    <div class="phone-device" id="phone-device">
+      <!-- Phone notch -->
+      <div class="phone-notch" aria-hidden="true">
+        <span class="notch-time">12:47</span>
+        <span class="notch-island"></span>
+        <span class="notch-icons">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.237 4.237 0 00-6 0zm-4-4l2 2a7.074 7.074 0 0110 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+        </span>
+      </div>
+
+      <!-- App top bar -->
+      <div class="app-topbar">
+        <button class="mini-menu" type="button" aria-label="Menu" title="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <strong>Race Hub</strong>
+        <span class="app-live-badge">LIVE</span>
+      </div>
+
+      <!-- Scrollable app content -->
+      <div class="app-scroll" id="appScroll">
+
+        <!-- Hero: Night Race -->
+        <section class="app-section app-hero" id="app-hero">
+          <div class="app-hero-image">
+            <img src="assets/f1-car-night.png" alt="Formula 1 car racing at night with sparks flying">
+            <div class="app-hero-overlay">
+              <span class="app-badge">Race Weekend</span>
+              <h1>Singapore Grand Prix</h1>
+              <p>Lights out under the floodlights — the most demanding night race on the calendar.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Race Countdown -->
+        <section class="app-section app-countdown" id="app-countdown">
+          <div class="app-section-header">
+            <span class="app-eyebrow">Next Session</span>
+            <h2>Qualifying — Q3</h2>
+          </div>
+          <div class="app-countdown-grid">
+            <div class="countdown-cell">
+              <strong>00</strong>
+              <span>Days</span>
+            </div>
+            <div class="countdown-cell">
+              <strong>02</strong>
+              <span>Hrs</span>
+            </div>
+            <div class="countdown-cell">
+              <strong>47</strong>
+              <span>Min</span>
+            </div>
+            <div class="countdown-cell">
+              <strong>13</strong>
+              <span>Sec</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Driver Profile Card -->
+        <section class="app-section app-driver-card" id="app-driver">
+          <div class="app-section-header">
+            <span class="app-eyebrow">Driver Focus</span>
+            <h2>In the Cockpit</h2>
+          </div>
+          <div class="app-driver-hero">
+            <img src="assets/f1-driver-cockpit.png" alt="Formula 1 driver in the cockpit ready for the race">
+          </div>
+          <div class="app-driver-stats">
+            <div class="stat-item">
+              <strong>P1</strong>
+              <span>Grid</span>
+            </div>
+            <div class="stat-item">
+              <strong>1:29.7</strong>
+              <span>Best Lap</span>
+            </div>
+            <div class="stat-item">
+              <strong>4</strong>
+              <span>Wins</span>
+            </div>
+            <div class="stat-item">
+              <strong>281</strong>
+              <span>Points</span>
+            </div>
+          </div>
+          <p class="app-driver-bio">
+            Focused intensity behind the visor. Every micro-adjustment of the steering wheel, every throttle input calibrated to perfection. This is where championships are decided — one corner at a time.
+          </p>
+        </section>
+
+        <!-- Pit Strategy -->
+        <section class="app-section app-strategy" id="app-strategy">
+          <div class="app-section-header">
+            <span class="app-eyebrow">Pit Wall</span>
+            <h2>Race Strategy</h2>
+          </div>
+          <div class="app-strategy-image">
+            <img src="assets/f1-pitstop.png" alt="Formula 1 pit stop crew servicing a car">
+          </div>
+          <div class="app-strategy-metrics">
+            <div class="strategy-metric">
+              <div class="metric-icon tyre-soft"></div>
+              <div>
+                <strong>Soft → Medium</strong>
+                <span>Lap 18 pit window</span>
+              </div>
+            </div>
+            <div class="strategy-metric">
+              <div class="metric-icon tyre-medium"></div>
+              <div>
+                <strong>Medium → Hard</strong>
+                <span>Lap 38 pit window</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-strategy-data">
+            <div class="data-row">
+              <span>Pit Stop Time</span>
+              <strong>2.4s</strong>
+            </div>
+            <div class="data-row">
+              <span>Undercut Gap</span>
+              <strong>1.8s</strong>
+            </div>
+            <div class="data-row">
+              <span>Tyre Degradation</span>
+              <strong>0.08s/lap</strong>
+            </div>
+            <div class="data-row">
+              <span>Fuel Load</span>
+              <strong>105 kg</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Helmet & Equipment -->
+        <section class="app-section app-gear" id="app-gear">
+          <div class="app-section-header">
+            <span class="app-eyebrow">Equipment</span>
+            <h2>Race Helmet</h2>
+          </div>
+          <div class="app-gear-showcase">
+            <img src="assets/f1-helmet.png" alt="Formula 1 racing helmet with carbon fiber detail and track reflection in visor">
+          </div>
+          <p class="app-gear-desc">
+            Carbon fiber construction weighing just 1.25 kg. The visor reflects the track ahead — a driver's entire world compressed into that narrow field of view at 330 km/h.
+          </p>
+        </section>
+
+        <!-- Telemetry -->
+        <section class="app-section app-telemetry" id="app-telemetry">
+          <div class="app-section-header">
+            <span class="app-eyebrow">Telemetry</span>
+            <h2>Steering Wheel</h2>
+          </div>
+          <div class="app-telemetry-image">
+            <img src="assets/f1-steering-wheel.png" alt="Formula 1 steering wheel with complex buttons and digital display">
+          </div>
+          <div class="app-telemetry-stats">
+            <div class="telemetry-stat">
+              <span class="telemetry-value">338</span>
+              <span class="telemetry-unit">km/h</span>
+              <span class="telemetry-label">Top Speed</span>
+            </div>
+            <div class="telemetry-stat">
+              <span class="telemetry-value">5.2</span>
+              <span class="telemetry-unit">G</span>
+              <span class="telemetry-label">Max Lateral</span>
+            </div>
+            <div class="telemetry-stat">
+              <span class="telemetry-value">850</span>
+              <span class="telemetry-unit">HP</span>
+              <span class="telemetry-label">Power Unit</span>
+            </div>
+          </div>
+          <div class="app-telemetry-bars">
+            <div class="bar-item">
+              <span class="bar-label">Throttle</span>
+              <div class="bar-track">
+                <div class="bar-fill bar-throttle" style="width: 92%"></div>
+              </div>
+              <span class="bar-value">92%</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-label">Brake</span>
+              <div class="bar-track">
+                <div class="bar-fill bar-brake" style="width: 0%"></div>
+              </div>
+              <span class="bar-value">0%</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-label">ERS Deploy</span>
+              <div class="bar-track">
+                <div class="bar-fill bar-ers" style="width: 67%"></div>
+              </div>
+              <span class="bar-value">67%</span>
+            </div>
+            <div class="bar-item">
+              <span class="bar-label">DRS</span>
+              <div class="bar-track">
+                <div class="bar-fill bar-drs" style="width: 100%"></div>
+              </div>
+              <span class="bar-value">Open</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Standings -->
+        <section class="app-section app-standings" id="app-standings">
+          <div class="app-section-header">
+            <span class="app-eyebrow">Championship</span>
+            <h2>Driver Standings</h2>
+          </div>
+          <div class="standings-table">
+            <div class="standing-row standing-header">
+              <span>Pos</span>
+              <span>Driver</span>
+              <span>Team</span>
+              <span>Pts</span>
+            </div>
+            <div class="standing-row highlight">
+              <span class="pos-badge">1</span>
+              <span>M. Verstappen</span>
+              <span class="team-tag team-rbr">RBR</span>
+              <span>281</span>
+            </div>
+            <div class="standing-row">
+              <span class="pos-badge">2</span>
+              <span>L. Norris</span>
+              <span class="team-tag team-mcl">MCL</span>
+              <span>253</span>
+            </div>
+            <div class="standing-row">
+              <span class="pos-badge">3</span>
+              <span>C. Leclerc</span>
+              <span class="team-tag team-fer">FER</span>
+              <span>228</span>
+            </div>
+            <div class="standing-row">
+              <span class="pos-badge">4</span>
+              <span>C. Sainz</span>
+              <span class="team-tag team-fer">FER</span>
+              <span>207</span>
+            </div>
+            <div class="standing-row">
+              <span class="pos-badge">5</span>
+              <span>O. Piastri</span>
+              <span class="team-tag team-mcl">MCL</span>
+              <span>194</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Team Radio -->
+        <section class="app-section app-radio" id="app-radio" data-tab-group>
+          <div class="tabs" role="tablist" aria-label="Mobile team radio tabs">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="app-panel-a" id="app-tab-a" data-tab>Garage</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="app-panel-b" id="app-tab-b" data-tab>Radio</button>
+          </div>
+
+          <div class="tab-content app-tab-content">
+            <div class="tab-panel is-active" id="app-panel-a" role="tabpanel" aria-labelledby="app-tab-a" data-tab-panel>
+              <span class="app-eyebrow">Team Call</span>
+              <h2>Box this lap</h2>
+              <p>Mechanics ready. Tyres staged on the warming blankets. Pit lane delta is inside the target window — we have the gap.</p>
+            </div>
+            <div class="tab-panel" id="app-panel-b" role="tabpanel" aria-labelledby="app-tab-b" data-tab-panel>
+              <span class="app-eyebrow">Driver Radio</span>
+              <h2>Push now, push!</h2>
+              <p>Battery fully available. Traffic clear for two laps. The car ahead is losing rear grip — this is our window to attack.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Bottom home indicator -->
+      <div class="phone-home-bar" aria-hidden="true"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
