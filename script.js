@@ -135,7 +135,7 @@
     activateTab(tabs.find((tab) => tab.classList.contains("is-active")) || tabs[0]);
   });
 
-  /* ── Scroll-triggered fade-in reveal ── */
+  // Scroll fade-in
   const revealTargets = document.querySelectorAll(".panel, .app-section");
   revealTargets.forEach((el) => el.classList.add("fade-in"));
 
@@ -153,7 +153,7 @@
 
   revealTargets.forEach((el) => revealObserver.observe(el));
 
-  /* ── Live countdown timer ── */
+  // Countdown timer
   const countdownCells = document.querySelectorAll(".countdown-cell strong");
   if (countdownCells.length === 4) {
     let totalSeconds =
